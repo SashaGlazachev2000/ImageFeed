@@ -16,6 +16,7 @@
 		B333020C2AD00D5000F29F94 /* ImageFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333020B2AD00D5000F29F94 /* ImageFeedTests.swift */; };
 		B33302162AD00D5000F29F94 /* ImageFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33302152AD00D5000F29F94 /* ImageFeedUITests.swift */; };
 		B33302182AD00D5000F29F94 /* ImageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33302172AD00D5000F29F94 /* ImageFeedUITestsLaunchTests.swift */; };
+		B341A2792AD958DD008B55D1 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341A2782AD958DD008B55D1 /* ImagesListCell.swift */; };
 		B397A4272AD422B1002EC05D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397A4262AD422B1002EC05D /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		B33302112AD00D5000F29F94 /* ImageFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33302152AD00D5000F29F94 /* ImageFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITests.swift; sourceTree = "<group>"; };
 		B33302172AD00D5000F29F94 /* ImageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B341A2782AD958DD008B55D1 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		B397A4262AD422B1002EC05D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +106,7 @@
 				B397A4252AD42290002EC05D /* Helper */,
 				B33301F42AD00D4E00F29F94 /* AppDelegate.swift */,
 				B33301F62AD00D4E00F29F94 /* SceneDelegate.swift */,
-				B33301F82AD00D4E00F29F94 /* ImagesListViewController.swift */,
+				B341A27A2AD95972008B55D1 /* ImagesList */,
 				B33301FA2AD00D4E00F29F94 /* Main.storyboard */,
 				B33301FD2AD00D4F00F29F94 /* Assets.xcassets */,
 				B33301FF2AD00D4F00F29F94 /* LaunchScreen.storyboard */,
@@ -128,6 +130,15 @@
 				B33302172AD00D5000F29F94 /* ImageFeedUITestsLaunchTests.swift */,
 			);
 			path = ImageFeedUITests;
+			sourceTree = "<group>";
+		};
+		B341A27A2AD95972008B55D1 /* ImagesList */ = {
+			isa = PBXGroup;
+			children = (
+				B33301F82AD00D4E00F29F94 /* ImagesListViewController.swift */,
+				B341A2782AD958DD008B55D1 /* ImagesListCell.swift */,
+			);
+			path = ImagesList;
 			sourceTree = "<group>";
 		};
 		B397A4252AD42290002EC05D /* Helper */ = {
@@ -271,6 +282,7 @@
 			files = (
 				B33301F92AD00D4E00F29F94 /* ImagesListViewController.swift in Sources */,
 				B33301F52AD00D4E00F29F94 /* AppDelegate.swift in Sources */,
+				B341A2792AD958DD008B55D1 /* ImagesListCell.swift in Sources */,
 				B33301F72AD00D4E00F29F94 /* SceneDelegate.swift in Sources */,
 				B397A4272AD422B1002EC05D /* UIColor+Extensions.swift in Sources */,
 			);
