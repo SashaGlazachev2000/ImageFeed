@@ -2,6 +2,9 @@ import UIKit
 
 final class ImagesListCell: UITableViewCell {
     @IBOutlet private var cellGradientView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
     
     static let reuseIdentifier = "ImagesListCell"
     
@@ -15,7 +18,6 @@ final class ImagesListCell: UITableViewCell {
         cellGradientView.clipsToBounds = true
         cellGradientView.layer.cornerRadius = 16
         cellGradientView.layer.maskedCorners = [.layerMaxXMaxYCorner,  .layerMinXMaxYCorner]
-
     }
     
 }

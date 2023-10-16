@@ -83,6 +83,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellGradientView" destination="sT2-9U-sEq" id="pQ1-ac-Lg8"/>
+                                            <outlet property="cellImage" destination="vf7-yZ-gi5" id="bqw-bq-5bk"/>
+                                            <outlet property="dateLabel" destination="pLD-1D-fPd" id="IEW-u4-sDc"/>
+                                            <outlet property="likeButton" destination="thK-mJ-Veg" id="5EG-Hf-7XH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

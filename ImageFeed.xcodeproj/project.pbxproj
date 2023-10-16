@@ -17,6 +17,7 @@
 		B33302162AD00D5000F29F94 /* ImageFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33302152AD00D5000F29F94 /* ImageFeedUITests.swift */; };
 		B33302182AD00D5000F29F94 /* ImageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33302172AD00D5000F29F94 /* ImageFeedUITestsLaunchTests.swift */; };
 		B341A2792AD958DD008B55D1 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341A2782AD958DD008B55D1 /* ImagesListCell.swift */; };
+		B39081582ADD56530045A42A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39081572ADD56530045A42A /* Date+Extensions.swift */; };
 		B397A4272AD422B1002EC05D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397A4262AD422B1002EC05D /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		B33302152AD00D5000F29F94 /* ImageFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITests.swift; sourceTree = "<group>"; };
 		B33302172AD00D5000F29F94 /* ImageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B341A2782AD958DD008B55D1 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		B39081572ADD56530045A42A /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		B397A4262AD422B1002EC05D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B397A4262AD422B1002EC05D /* UIColor+Extensions.swift */,
+				B39081572ADD56530045A42A /* Date+Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				B341A2792AD958DD008B55D1 /* ImagesListCell.swift in Sources */,
 				B33301F72AD00D4E00F29F94 /* SceneDelegate.swift in Sources */,
 				B397A4272AD422B1002EC05D /* UIColor+Extensions.swift in Sources */,
+				B39081582ADD56530045A42A /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
