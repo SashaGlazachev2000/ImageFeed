@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +24,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="186" id="Jlf-O7-BTx" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="186"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jlf-O7-BTx" id="jgR-KZ-iCV">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jlf-O7-BTx" id="jgR-KZ-iCV">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -38,23 +37,10 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sT2-9U-sEq">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KG9-js-tAA">
                                                     <rect key="frame" x="16" y="152" width="382" height="30"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 августа 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLD-1D-fPd" userLabel="Data Label">
-                                                            <rect key="frame" x="8" y="6" width="101.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" name="YP White"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="WZp-zD-j9P"/>
-                                                        <constraint firstAttribute="bottom" secondItem="pLD-1D-fPd" secondAttribute="bottom" constant="8" id="XQ0-35-zrQ"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="eHv-sm-2qu"/>
-                                                        <constraint firstItem="pLD-1D-fPd" firstAttribute="leading" secondItem="sT2-9U-sEq" secondAttribute="leading" constant="8" id="faz-NM-4MH"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pLD-1D-fPd" secondAttribute="trailing" constant="20" symbolic="YES" id="giF-6o-E5m"/>
+                                                        <constraint firstAttribute="height" constant="30" id="B1q-VD-OrC"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thK-mJ-Veg">
@@ -67,22 +53,31 @@
                                                     <state key="normal" image="Active"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="No Active"/>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 августа 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLD-1D-fPd" userLabel="Data Label">
+                                                    <rect key="frame" x="24" y="158" width="101.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" name="YP White"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" name="YP Black"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="sT2-9U-sEq" secondAttribute="trailing" constant="16" id="1Me-Fh-Bn6"/>
+                                                <constraint firstItem="vf7-yZ-gi5" firstAttribute="trailing" secondItem="KG9-js-tAA" secondAttribute="trailing" id="709-o4-UfI"/>
                                                 <constraint firstAttribute="bottom" secondItem="vf7-yZ-gi5" secondAttribute="bottom" constant="4" id="CLM-20-NVo"/>
-                                                <constraint firstItem="sT2-9U-sEq" firstAttribute="leading" secondItem="jgR-KZ-iCV" secondAttribute="leading" constant="16" id="NCe-YQ-RO1"/>
                                                 <constraint firstAttribute="trailing" secondItem="vf7-yZ-gi5" secondAttribute="trailing" constant="16" id="YvI-zx-Jjf"/>
-                                                <constraint firstAttribute="bottom" secondItem="sT2-9U-sEq" secondAttribute="bottom" constant="4" id="Zcr-95-OhL"/>
+                                                <constraint firstItem="vf7-yZ-gi5" firstAttribute="bottom" secondItem="pLD-1D-fPd" secondAttribute="bottom" constant="8" id="aFG-GP-mxa"/>
                                                 <constraint firstItem="vf7-yZ-gi5" firstAttribute="top" secondItem="jgR-KZ-iCV" secondAttribute="top" constant="4" id="dp0-8O-8zZ"/>
+                                                <constraint firstItem="vf7-yZ-gi5" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pLD-1D-fPd" secondAttribute="trailing" constant="8" id="ezx-C9-cC2"/>
+                                                <constraint firstItem="KG9-js-tAA" firstAttribute="leading" secondItem="vf7-yZ-gi5" secondAttribute="leading" id="gUM-yW-pLG"/>
+                                                <constraint firstItem="pLD-1D-fPd" firstAttribute="leading" secondItem="vf7-yZ-gi5" secondAttribute="leading" constant="8" id="iuH-cL-ra2"/>
                                                 <constraint firstItem="vf7-yZ-gi5" firstAttribute="leading" secondItem="jgR-KZ-iCV" secondAttribute="leading" constant="16" id="ius-Rz-nbf"/>
-                                                <constraint firstAttribute="trailing" secondItem="thK-mJ-Veg" secondAttribute="trailing" constant="16" id="pyT-NT-K8J"/>
-                                                <constraint firstItem="thK-mJ-Veg" firstAttribute="top" secondItem="jgR-KZ-iCV" secondAttribute="top" constant="4" id="snb-cO-TZb"/>
+                                                <constraint firstItem="vf7-yZ-gi5" firstAttribute="bottom" secondItem="KG9-js-tAA" secondAttribute="bottom" id="nX9-b1-fig"/>
+                                                <constraint firstItem="thK-mJ-Veg" firstAttribute="top" secondItem="vf7-yZ-gi5" secondAttribute="top" id="sru-8x-UI8"/>
+                                                <constraint firstItem="vf7-yZ-gi5" firstAttribute="trailing" secondItem="thK-mJ-Veg" secondAttribute="trailing" id="tQ4-40-g8X"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cellGradientView" destination="sT2-9U-sEq" id="pQ1-ac-Lg8"/>
+                                            <outlet property="cellGradientView" destination="KG9-js-tAA" id="w5f-Vy-92r"/>
                                             <outlet property="cellImage" destination="vf7-yZ-gi5" id="bqw-bq-5bk"/>
                                             <outlet property="dateLabel" destination="pLD-1D-fPd" id="IEW-u4-sDc"/>
                                             <outlet property="likeButton" destination="thK-mJ-Veg" id="5EG-Hf-7XH"/>
@@ -110,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64.885496183206101" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="63.768115942028992" y="-2.6785714285714284"/>
         </scene>
     </scenes>
     <resources>
@@ -123,8 +118,5 @@
         <namedColor name="YP White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
