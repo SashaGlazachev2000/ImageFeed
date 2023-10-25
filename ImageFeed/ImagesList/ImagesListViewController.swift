@@ -17,7 +17,6 @@ class ImagesListViewController: UIViewController {
             let viewController = segue.destination as! SingleImageViewController
             let indexPath = sender as! IndexPath
             let image = UIImage(named: photosName[indexPath.row])
-//            _ = viewController.view //загрузка
             viewController.image = image
         } else {
             super.prepare(for: segue, sender: sender)
