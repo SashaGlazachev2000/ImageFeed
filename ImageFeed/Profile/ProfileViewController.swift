@@ -1,14 +1,14 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    
+    // MARK: - Private Properties
     private var avatarImageView: UIImageView?
     private var descriptionLabel: UILabel?
     private var loginNameLabel: UILabel?
     private var nameLabel: UILabel?
     private var logoutButton: UIButton?
     
-  
+    // MARK: - View Life Cycles
     override func viewDidLoad() {
         initImage()
         initDescriptionLabel()
@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
         initLogoutButton()
     }
     
+    // MARK: - Private Methods
     private func initImage() {
         let image = UIImage(named: "avatar")
         let imageView = UIImageView(image: image)

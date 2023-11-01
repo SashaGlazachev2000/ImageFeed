@@ -1,17 +1,21 @@
 import UIKit
 
 class ImagesListViewController: UIViewController {
+    // MARK: - IB Outlets
     @IBOutlet private var tableView: UITableView!
     
+    // MARK: - Private Properties
     private let photosName: [String] = Array(0..<21).map{ "\($0)" }
     private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
     
+    // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ShowSingleImageSegueIdentifier {
             let viewController = segue.destination as! SingleImageViewController
