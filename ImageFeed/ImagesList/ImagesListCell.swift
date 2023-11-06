@@ -7,10 +7,10 @@ final class ImagesListCell: UITableViewCell {
     @IBOutlet private var cellImage: UIImageView!
     @IBOutlet private var likeButton: UIButton!
     
-    // MARK: - Public Properties
+    // MARK: - Internal Properties
     static let reuseIdentifier = "ImagesListCell"
     
-    // MARK: - Public Methods
+    // MARK: - Internal Methods
     func configCell(imageCell: UIImage, imageButton: UIImage?, dateString: String) {
         cellImage.image = imageCell
         dateLabel.text = dateString

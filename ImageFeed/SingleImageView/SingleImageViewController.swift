@@ -28,8 +28,9 @@ class SingleImageViewController: UIViewController {
     }
     
     @IBAction func didTapShareButton(_ sender: Any) {
+        guard let image = image else { return }
         let share = UIActivityViewController(
-            activityItems: [image!],
+            activityItems: [image],
             applicationActivities: nil
         )
         share.overrideUserInterfaceStyle = .dark
@@ -57,6 +58,6 @@ class SingleImageViewController: UIViewController {
 
 extension SingleImageViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-          imageView
-      }
+        imageView
+    }
 }
