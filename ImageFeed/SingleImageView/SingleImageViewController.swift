@@ -32,6 +32,7 @@ class SingleImageViewController: UIViewController {
             activityItems: [image!],
             applicationActivities: nil
         )
+        share.overrideUserInterfaceStyle = .dark
         present(share, animated: true, completion: nil)
     }
     

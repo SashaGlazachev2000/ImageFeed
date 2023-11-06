@@ -70,7 +70,8 @@ class ProfileViewController: UIViewController {
     
     private func initLogoutButton() {
         guard let avatarImageView else { return }
-        let buttonView = UIButton.systemButton(with: UIImage(named: "exit")!, target: self, action: #selector(didTapLogoutButton))
+        guard let image = UIImage(named: "Exit") else { return }
+        let buttonView = UIButton.systemButton(with: image, target: self, action: #selector(didTapLogoutButton))
         buttonView.tintColor = .ypRed
         self.logoutButton = buttonView
         buttonView.translatesAutoresizingMaskIntoConstraints = false
