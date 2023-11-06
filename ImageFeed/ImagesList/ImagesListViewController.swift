@@ -1,14 +1,30 @@
 import UIKit
 
 class ImagesListViewController: UIViewController {
+    // MARK: - IB Outlets
     @IBOutlet private var tableView: UITableView!
     
+    // MARK: - Private Properties
     private let photosName: [String] = Array(0..<21).map{ "\($0)" }
+    private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
     
+    // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ShowSingleImageSegueIdentifier {
+            let viewController = segue.destination as! SingleImageViewController
+            let indexPath = sender as! IndexPath
+            let image = UIImage(named: photosName[indexPath.row])
+            viewController.image = image
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
     }
 }
 
@@ -37,22 +53,26 @@ extension ImagesListViewController {
         let index = indexPath.row
         let image = UIImage(named: "\(index)")
         guard let image = image else { return }
-        cell.cellImage.image = image
+        
         
         let date = Date()
         let calendar = Calendar.current
         let _ = calendar.component(.hour, from: date)
         let _ = calendar.component(.minute, from: date)
-        cell.dateLabel.text = date.dateTimeString
+        
         
         let imageActive = UIImage(named: "Active")
         let imageNoActive = UIImage(named: "No Active")
-        cell.likeButton.setImage(index % 2 == 0 ? imageActive : imageNoActive, for: .normal)
+        
+        
+        cell.configCell(imageCell: image, imageButton: index % 2 == 0 ? imageActive : imageNoActive, dateString: date.dateTimeString)
     }
 }
 
 extension ImagesListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: ShowSingleImageSegueIdentifier, sender: indexPath)
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let image = UIImage(named: ("\(indexPath.row)"))

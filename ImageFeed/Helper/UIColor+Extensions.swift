@@ -8,6 +8,6 @@ extension UIColor {
     static var ypRed: UIColor { UIColor(named: "YP Red") ?? UIColor.red }
     static var ypWhiteAlpha: UIColor { UIColor(named: "YP White (Alpha 50)") ?? UIColor.white }
     static var ypWhite: UIColor { UIColor(named: "YP White") ?? UIColor.white }
-    static var ypGradientOne: UIColor { UIColor(named: "YP Gradient One") ?? UIColor.white }
-    static var ypGradientTwo: UIColor { UIColor(named: "YP Gradient Two") ?? UIColor.white }
+    static var ypGradientOne: UIColor { UIColor(named: "Yp Gradient One") ?? UIColor.white }
+    static var ypGradientTwo: UIColor { UIColor(named: "Yp Gradient Two") ?? UIColor.white }
 }
