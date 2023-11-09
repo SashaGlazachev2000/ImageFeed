@@ -37,17 +37,19 @@ extension ImagesListViewController {
         let index = indexPath.row
         let image = UIImage(named: "\(index)")
         guard let image = image else { return }
-        cell.cellImage.image = image
+        
         
         let date = Date()
         let calendar = Calendar.current
         let _ = calendar.component(.hour, from: date)
         let _ = calendar.component(.minute, from: date)
-        cell.dateLabel.text = date.dateTimeString
+        
         
         let imageActive = UIImage(named: "Active")
         let imageNoActive = UIImage(named: "No Active")
-        cell.likeButton.setImage(index % 2 == 0 ? imageActive : imageNoActive, for: .normal)
+        
+        
+        cell.configCell(imageCell: image, imageButton: index % 2 == 0 ? imageActive : imageNoActive, dateString: date.dateTimeString)
     }
 }
 
