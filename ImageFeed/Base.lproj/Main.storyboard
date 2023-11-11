@@ -71,10 +71,43 @@
                     <view key="view" contentMode="scaleToFill" id="fHI-67-gGP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOB-KQ-T1Z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" name="YP White"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YS-L6-LGI">
+                                <rect key="frame" x="8" y="9" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="7NE-eI-TUo"/>
+                                    <constraint firstAttribute="width" constant="24" id="A4S-pA-dMi"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="nav_back_button"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="eQ7-tq-H7n" eventType="touchUpInside" id="B4A-Df-QBe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vm4-Gf-jXC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iOB-KQ-T1Z" firstAttribute="leading" secondItem="fHI-67-gGP" secondAttribute="leading" id="3Pw-Az-CZt"/>
+                            <constraint firstAttribute="bottom" secondItem="iOB-KQ-T1Z" secondAttribute="bottom" id="6ih-Qt-0Wd"/>
+                            <constraint firstItem="iOB-KQ-T1Z" firstAttribute="top" secondItem="fHI-67-gGP" secondAttribute="top" id="FFb-gc-uKj"/>
+                            <constraint firstItem="9YS-L6-LGI" firstAttribute="leading" secondItem="fHI-67-gGP" secondAttribute="leading" constant="8" id="Ug8-3w-7IR"/>
+                            <constraint firstItem="9YS-L6-LGI" firstAttribute="top" secondItem="Vm4-Gf-jXC" secondAttribute="top" constant="9" id="dB4-e8-z7z"/>
+                            <constraint firstAttribute="trailing" secondItem="iOB-KQ-T1Z" secondAttribute="trailing" id="gI7-UP-Pex"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ba7-Tu-dw7"/>
+                    <connections>
+                        <outlet property="webView" destination="iOB-KQ-T1Z" id="tPi-7j-S9X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqL-Bb-iss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,6 +331,7 @@
         <image name="0" width="200" height="132"/>
         <image name="No Active" width="44" height="44"/>
         <image name="logo_auth" width="60" height="60"/>
+        <image name="nav_back_button" width="24" height="24"/>
         <image name="share_button" width="51" height="50"/>
         <image name="tab_back_button" width="24" height="24"/>
         <image name="tab_editorial_active" width="30" height="30"/>
